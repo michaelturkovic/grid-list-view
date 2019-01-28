@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Project - Books</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">
+            <h3>Books</h3>
+        </div>
+        <div class="header-action">
+            <i id="view-icon" class="material-icons" onclick="changeView()">view_list</i>
+        </div>
+    </div>
+
+    <div id="view" class="container grid-view">
+
+        <div class="list-heading">
+            <div class="body-titles">
+                <div class="info-heading">
+                    <div class="title-heading">
+                        <p>Title</p>
+                    </div>
+                    <div class="quote-heading">
+                        <p>Quote</p>
+                    </div>
+                    <div class="author-heading">
+                        <p>Author</p>
+                    </div>
+                </div>
+                <div class="cover-heading">
+                    <p>Cover</p>
+                </div>
+            </div>
+            <div class="footer-titles">
+                <div class="like-heading">
+                    <p>Likes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>The Wizard of Oz</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            Dorothy found herselft riding easily between two of the biggest Monkeys, one of them the
+                            King himself. They had made a chair
+                            of their hands and were careful not to hurt her. "Why do you have to obey the charm of the
+                            Golden Cap?"
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>L.Frank Baum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>16</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn1" class="material-icons menu-btn" onclick="toggleMenu('dropdown1')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown1" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>Mobi Dick</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            Round the world! There is much in that sound to inspire proud feelings; but whereto does
+                            all that circumnavigation conduct?
+                            Only through numberless perils to the very point whence we started, where those whaht we
+                            left behind secure,
+                            were all the time before us.
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Herman Melville</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>28</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn2" class="material-icons menu-btn" onclick="toggleMenu('dropdown2')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown2" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>The War of the Worlds</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            "What news from the common?" I said. "People seem fair silly about the common" said the
+                            woman over the gate
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>H. G. Wells</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>19</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn3" class="material-icons menu-btn" onclick="toggleMenu('dropdown3')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown3" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>At the Earth's Core</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            I wondered why these agile creatures required connecting bridges between the trees, but
+                            later when I saw the motely
+                            aggregation of half-savage beasts which they kept within wheir village I realized the
+                            necessity for the pathways.
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Edgar Rice Burroughs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>8</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn4" class="material-icons menu-btn" onclick="toggleMenu('dropdown4')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown4" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>A Prince of Mars</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            I drew rein on a little level promontory overlooking the trail below and to my left, and
+                            saw the party of
+                            pursuing savages disappearing around the point of a neighboring peak.
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Edgar Rice Burroughs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>11</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn5" class="material-icons menu-btn" onclick="toggleMenu('dropdown5')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown5" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>Alice in Wonderland</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            The Hatter shook his head mournfully. 'Not I!' he replied. 'We quarrelled last March-just
+                            before HE went mad, you know-'
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Lewis Carroll</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>21</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn6" class="material-icons menu-btn" onclick="toggleMenu('dropdown6')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown6" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>The Scarlet Plague</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            It was at this point that HareLip rose to his feet, an expression of huge contempt on his
+                            face. "Ganser," he announced,"you make me sick with your gabble.
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Jack London</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>13</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn7" class="material-icons menu-btn" onclick="toggleMenu('dropdown7')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown7" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="./img/book.png" alt="Book">
+                </div>
+                <div class="card-info">
+                    <div class="book-title">
+                        <h4>Around the World in 80 Days</h4>
+                    </div>
+                    <div class="book-quote">
+                        <p>
+                            Nothing could be more simple. Indeed, it was all so simple that Fix and Passepartout felt
+                            their hearts beating as if
+                            they would crack. They were listening for the whistle agreed upon, when suddenly savage
+                            cries resounded in the air,
+                            accompanied by reports which certainly did not issue from the car where duellists were.
+                        </p>
+                    </div>
+                    <div class="book-author">
+                        <p>Jules Verne</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="book-likes">
+                    <span class="like-icon">
+                        <i class="material-icons">star</i>
+                    </span>
+                    <span class="like-number">
+                        <h5>18</h5>
+                    </span>
+                </div>
+                <div class="book-dropdown">
+                    <i id="btn8" class="material-icons menu-btn" onclick="toggleMenu('dropdown8')">more_horiz</i>
+                </div>
+            </div>
+            <div id="dropdown8" class="dropdown-menu grid-dropdown">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Edit book details</a>
+                    </li>
+                    <li>
+                        <a href="#">Duplicate book</a>
+                    </li>
+                    <li>
+                        <a href="#">Move book</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete book
+                            <br />
+                            <span class="dropdown-span">Delete this book permanently</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

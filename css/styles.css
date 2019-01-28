@@ -1,0 +1,451 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.header {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.header h3 {
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.header .material-icons {
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* GRID VIEW */
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 20px;
+    /* overflow: hidden; */
+}
+
+.grid-view .book-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.grid-view .book-card .card-body {
+    display: flex;
+    flex: 6;
+    flex-direction: row;
+    background-color: aqua
+}
+
+.grid-view .book-card .card-body .card-img {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding-top: 15px;
+    background-color: #D1F5F9;
+}
+
+.grid-view .book-card .card-body .card-img img {
+    height: 65px;
+    width: 40px;
+}
+
+.grid-view .book-card .card-body .card-info {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    background-color: #ffffff;
+    justify-content: flex-start;
+    padding: 0 15px;
+}
+
+.grid-view .book-card .card-body .card-info .book-title {
+    margin: 0;
+}
+
+.grid-view .book-card .card-footer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 15px; */
+    background-color: #B3E9EF;
+    color: #666666;
+}
+
+.grid-view .book-card .card-footer .book-likes {
+    display: flex;
+    flex: 7;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-view .book-card .card-footer .book-likes .like-icon {
+    padding-left: 20px;
+}
+
+
+.grid-view .book-card .card-footer .book-dropdown {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.grid-view .list-heading {
+    display: none;
+}
+
+.book-title {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.book-quote {
+    font-size: 12px;
+    font-weight: 100;
+    text-align: justify;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+}
+
+.book-quote p {
+    margin: 0;
+}
+
+.book-author {
+    font-size: 11px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.book-likes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.like-number h5 {
+    font-size: 12px; 
+    font-weight: 100;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    margin: 0;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    overflow: none;
+    z-index: 999;
+    background-color: #404040;
+}
+
+.dropdown-menu .menu-list {
+    margin: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: right;
+}
+
+.dropdown-menu .menu-list > li {
+    display: block;
+}
+
+.dropdown-menu .menu-list > li > a {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    text-decoration:none;
+    font-size: 13px;
+    color:#ffffff;
+    padding: 10px;
+}
+
+.dropdown-span {
+    font-size: 9px;
+    color: #919191
+}
+
+.dropdown-menu a:hover {
+    background:#4A4A4A;
+}
+
+.book-dropdown .menu-btn {
+    cursor: pointer;
+}
+
+.show-menu {
+    display: block;
+}
+
+/* LIST VIEW */
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-view .book-card {
+    display: flex;
+    position: relative; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list-view .book-card .card-body {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+}
+
+.list-view .book-card .card-body .card-img {
+    display: flex;
+    flex: 0.2;
+    justify-content: center;
+    align-items: center;
+    background-color: #D1F5F9;
+    order: 2;
+}
+
+.list-view .book-card .card-body .card-img img {
+    height: 45px;
+    width: 30px;
+}
+
+.list-view .book-card .card-body .card-info {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    background-color: #ffffff;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    order: 1;
+}
+
+.list-view .book-card .card-body .card-info .book-title {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 23%;
+}
+
+.list-view .book-card .card-body .card-info h4  {
+    padding-left: 20px;
+}
+
+.list-view .book-card .card-body .card-info .book-quote {
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    width: 55%;
+}
+
+.list-view .book-card .card-body .card-info .book-quote p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.5em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.list-view .book-card .card-body .card-info  .book-author {
+    height: 100%;
+    display: flex;
+    width: 22%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list-view .book-card .card-body .card-info  p {
+    padding-right: 20px;
+}
+
+.list-view .book-card .card-footer {
+    display: flex;
+    flex: 0.8;
+    flex-direction: row;
+    background-color: #ffffff;
+    color: #666666;
+}
+
+.list-view .book-card .card-footer .book-likes {
+    display: flex;
+    flex: 3;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-view .book-card .card-footer .book-likes .like-icon {
+    padding-left: 10px;
+}
+
+
+.list-view .book-card .card-footer .book-dropdown {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.list-view .dropdown-menu {
+    right: 0;
+    width: 10%;
+}
+
+.list-view .list-heading {
+    display: flex;
+    height: 25px;
+    color: #000000;
+    font-size: 12px;
+}
+
+.list-view .list-heading .body-titles {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+}
+
+.list-view .list-heading .info-heading {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    align-items: center;
+}
+
+.list-view .list-heading .cover-heading {
+    display: flex;
+    flex: 0.2;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-view .list-heading .body-titles .info-heading .title-heading {
+    display: flex;
+    width: 23%;
+    align-items: center;
+}
+
+.list-view .list-heading .body-titles .info-heading .title-heading p {
+   padding-left: 20px;
+}
+
+.list-view .list-heading .body-titles .info-heading .quote-heading {
+    display: flex;
+    width: 55%;
+}
+
+.list-view .list-heading .body-titles .info-heading .author-heading {
+    display: flex;
+    width: 22%;
+    justify-content: flex-end;
+}
+
+.list-view .list-heading .body-titles .info-heading .author-heading p {
+    padding-right: 20px;
+}
+
+.list-view .list-heading .footer-titles {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+}
+
+.list-view .list-heading .footer-titles p{
+    padding-left: 10px;
+}
+
+
+/* GRID MEDIA QUERIES */
+
+@media (min-width: 1500px) {
+    .grid-view .book-card{
+        height: 300px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .grid-view .book-card{
+        height: 290px;
+    }
+}
+
+@media(min-width: 1280), (max-width: 1400px) {
+    .grid-view .book-card{
+        height: 280px;
+    }
+}
+
+@media(max-width: 1220px) {
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-view .book-card {
+        height: 270px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-view .book-card {
+        height: 280px;
+    }
+}
+
+@media(max-width: 540px) {
+    .grid-view {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-view .book-card {
+        height: 220px;
+    }
+}
+
+@media(max-width: 380px) {
+    .grid-view {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-view .book-card {
+        height: 250px;
+    }
+}
